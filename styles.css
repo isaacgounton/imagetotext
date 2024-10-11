@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #F5A623;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --card-background: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+  }
+
+  .container {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  #imageInput {
+    display: none;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 16px;
+    margin: 10px 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .btn:hover {
+    background-color: #3A7BC8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+  }
+
+  #result {
+    margin-top: 1.5rem;
+    text-align: left;
+    display: none;
+  }
+
+  #editor {
+    height: 300px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #editButtons {
+    display: none;
+    margin-top: 1.5rem;
+  }
+
+  #copyButton {
+    background-color: var(--secondary-color);
+  }
+
+  #copyButton:hover {
+    background-color: #E09511;
+  }
+
+  #dropZone {
+    border: 3px dashed #ccc;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #dropZone:hover, #dropZone.dragover {
+    background-color: rgba(74, 144, 226, 0.1);
+    border-color: var(--primary-color);
+  }
+
+  #dropZone p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+  }
+
+  .icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+
+  #apiKeyInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  #apiKeyInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  }
+
+  #apiKeyToggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  #apiKeyToggle:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .btn {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    #dropZone {
+      padding: 20px;
+    }
+
+    #dropZone p {
+      font-size: 16px;
+    }
+
+    .icon {
+      font-size: 36px;
+    }
+  }
